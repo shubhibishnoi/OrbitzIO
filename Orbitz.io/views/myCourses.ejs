@@ -1,0 +1,14 @@
+<%- include("header") -%>
+
+<div class="courseCon">
+ <% for(course of courses){%>
+   <div class="courseCard">
+     <h3><%= course.title%></h3>
+     <p><%= course.des%></p>
+
+     <a href="/course/<%= course._id%>">
+       <button type="button" >Open Course</button>
+     </a>
+   </div>
+ <%}%>
+</div>

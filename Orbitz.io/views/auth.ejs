@@ -1,0 +1,81 @@
+<%- include("header") -%>
+
+<div class="main">
+
+  <div class="login-box">
+    <h1>Login</h1>
+    <form action="/auth/login" method="post">
+      <label>Email</label>
+      <input type="email" name="username" value="" placeholder="Email" required />
+      <label>Password</label>
+      <input type="password" name="password" value="" placeholder="password" required />
+      <button type="submit" name="button">Login</button>
+    </form>
+
+  </div>
+
+  <div class="signup-box">
+    <h1>Sign Up</h1>
+    <h4>It's free and only takes a minute</h4>
+    <form action="/auth/register" method="post">
+      <label>Name</label>
+      <input type="text" name="name" value="" placeholder="Full Name" required />
+      <label>Email</label>
+      <input type="email" id="username" name="username" value="" placeholder="Email" required />
+      <label>Password</label>
+      <input type="password" name="password" value="" placeholder="password" required />
+
+      <label for="otp">OTP:</label>
+      <button id="otpBtn" class="otpBtn" type="button" name="button">Send OTP</button>
+      <input id="otp" type="number" name="otp" class="form-control" placeholder="Enter OTP" required>
+
+
+      <button id="regBtn" type="submit" name="button">Submit</button>
+    </form>
+
+  </div>
+
+</div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+
+    const otpBtn = $("#otpBtn");
+    const regBtn = $("#regBtn");
+    let otp;
+
+    otpBtn.on("click", () => {
+
+      const emailId = $("#username").val();
+      if(emailId != ""){
+        let url = "https://mailserviceotp.herokuapp.com/otp/y47b492f7db51417f4fa2e162/"+emailId;
+
+        $.getJSON(url, (data) => {
+          otp = data.otp;
+        });
+
+        const alertMessage = "Check OTP on your email Id: "+emailId;
+        alert(alertMessage);
+        otpBtn.css("display", "none");
+      }else{
+        alert("Please Fill all the fields");
+      }
+    });
+
+    regBtn.on("click", (e) => {
+      const otpVal = $("#otp").val();
+
+      console.log("OTP", otp);
+      if(otpVal != otp){
+        e.preventDefault();
+        alert("OTP is not correct, try again!!");
+        otpBtn.css("display", "inline-block");
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

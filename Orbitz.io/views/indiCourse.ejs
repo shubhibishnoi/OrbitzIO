@@ -1,0 +1,25 @@
+<%- include("header") -%>
+
+<div class="indiCourseCon">
+
+  <%if(courseJoined){%>
+
+    <h3><%= course.title%></h3>
+    <p><%= course.des%></p>
+    <h4>Topics:</h4>
+    <% for(topic of course.topics){%>
+      <div class="courseCard topicCard">
+        <h5><%= topic.title%></h5>
+        <p><%= topic.des%></p>
+        <a href="<%= topic.link%>">Open Resourse</a>
+      </div>
+  <%}%>
+
+
+  <%}else{%>
+    <h2>You didn't joined this course yet</h2>
+    <form class="" action="/course/join" method="post">
+      <button type="submit" name="courseID" value="<%= course._id%>">Join Course</button>
+    </form>
+  <%}%>
+</div>

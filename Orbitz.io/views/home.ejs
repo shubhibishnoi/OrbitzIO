@@ -1,0 +1,28 @@
+ <%- include("header") -%>
+
+    <div class="middle">
+        <div class="tagline-content">
+            <h2>Don't lose Hope In The Empty Space of Internet Courses,
+                Get Your Orbit Fixed With Orbitz.io
+            </h2>
+
+            <% if(isLogedIn){%>
+              <a href="/course"><button type="button" class="btn btn-outline-start btn btn-lg"> Get Started ➜</button></a>
+
+            <%}else{%>
+              <a href="/auth"><button type="button" class="btn btn-outline-start btn btn-lg"> Get Started ➜</button></a>
+
+            <%}%>
+
+        </div>
+
+        <img src="/images/image1.gif" class="tag-image" alt="">
+
+
+    </div>
+
+
+
+</body>
+
+</html>

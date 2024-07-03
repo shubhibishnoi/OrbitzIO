@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Josefin Sans', sans-serif;
+  color: #333;
+}
+
+li a {
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: #cdf6e5;
+  text-decoration: none;
+  color: #333;
+}
+
+li,
+a:hover {
+  color: hsl(175, 84%, 44%);
+  text-decoration: none;
+}
+
+h1 {
+  background-color: #cdf6e5;
+  margin-left: 10px;
+  margin-right: auto;
+  font-weight: bolder;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 20px 6% 10px;
+  background-color: #cdf6e5;
+  box-shadow: 0px 3px 2px 1px rgb(0 0 0 / 20%);
+}
+
+.navLink {
+  list-style: none;
+}
+
+.navLink li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.tag-image {
+  position: absolute;
+  right: 0;
+  top: 20vh;
+  z-index: -1;
+}
+
+.appName h1 {
+  background-color: #cdf6e5;
+}
+
+.middle {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 0 6%;
+  padding-top: 15vh;
+  height: 88vh;
+  margin-top: 5px;
+  z-index: -2;
+}
+
+.tagline-content h2 {
+  font-size: 2.8rem;
+  font-weight: bolder;
+  line-height: 2;
+}
+
+.middle button {
+  margin-top: 70px;
+  text-align: center;
+  background-color: #cdf6e5;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(155, 56%, 67%);
+  color: black;
+}
+
+.courseCon{
+  background: #ECECEC;
+  display: flex;
+  padding: 0 6%;
+  padding-top: 15vh;
+  min-height: 90vh;
+  margin-top: 5px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.courseCard{
+  box-shadow: 0px 5px 10px 5px rgb(230 230 230);
+  background-color: #fff;
+  height: 35vh;
+  width: 28vw;
+  padding: 20px 40px 40px;
+  border-radius: 5px;
+  color: #333;
+  margin: 5vh 0;
+}
+.courseCard h3{
+  font-weight: bolder;
+  font-size: 2.3rem;
+}
+.courseCard p {
+  text-align: left;
+}
+
+.courseCon button, .topicCard a{
+  background: #cdf6e5;
+  border-radius: 999px;
+  box-shadow: #cdf6e5 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #444;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  transition: 0.7s ease;
+}
+
+.courseCon button:hover {
+  background-color: hsl(155, 56%, 67%);
+  color: #666;
+}
+
+.indiCourseCon{
+  background: #ECECEC;
+  padding: 0 6%;
+  padding-top: 15vh;
+  min-height: 90vh;
+  margin-top: 5px;
+}
+
+.indiCourseCon h3{
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.topicCard{
+  margin: 3vh 0;
+  width: 50vw;
+}
+
+
+
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    padding: 10vh 6%;
+}
+
+.signup-box {
+    width: 360px;
+    height: 620px;
+    background-color: white;
+    border-radius: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.login-box {
+    width: 360px;
+    height: 280px;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.signup-box h1 {
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+h4 {
+    text-align: center;
+}
+
+form {
+    width: 300px;
+}
+
+form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline: none;
+}
+
+.main button {
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #49c1a2;
+    color: white;
+    font-size: 18px;
+}
+
+p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+.para-2 {
+    text-align: center;
+    color: black;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 5%;
+}
+
+.para-2 a {
+    color: #49c1a2;
+}
+
+.main .signup-box h1 {
+    font-size: 1.8rem;
+    border-radius: 20px;
+
+}
+
+.login-box h1 {
+    text-align: center;
+    border-radius: 20px;
+    width: 300px;
+}
+
+
+#topInpCon{
+  margin: 5vh 0;
+}
+#topInpCon div{
+  margin: 4vh 0;
+}
